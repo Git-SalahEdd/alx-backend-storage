@@ -18,6 +18,7 @@ def count_calls(method: Callable) -> Callable:
 
     return wrapper
 
+
 def call_history(method: Callable) -> Callable:
     """Decorator to track method calls and their inputs/outputs in Redis"""
     input_key = method.__qualname__ + ":inputs"
